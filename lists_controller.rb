@@ -12,10 +12,12 @@ class ListsController < ApplicationController
   end
   
   def index
-   
+    @lists = List.all
+
   end
 
   def show
+    @lists = List.find(params[:id])
   end
 
   def edit
